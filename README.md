@@ -110,8 +110,40 @@ and game_id =game.id
 and screen_name = 'Ilkka';
 ![](https://github.com/xind797/database/blob/main/screenshots/3-10.png)
 
+Exercise4:
+#1
+select country.name as "country name", airport.name as "airport name"
+from country 
+inner join airport on airport.iso_country = country.iso_country
+where country.name = "Finland" and scheduled_services = "yes";
+![](https://github.com/xind797/database/blob/main/screenshots/4-1.png)
 
+#2
+select screen_name, name
+from game
+inner join airport on airport.ident = game.location;
+![](https://github.com/xind797/database/blob/main/screenshots/4-2.png)
 
+#3
+select screen_name, country.name
+from game 
+inner join country on country.iso_country = airport.iso_country
+inner join airport on airport.ident = game.location;
+![](https://github.com/xind797/database/blob/main/screenshots/4-3.png)
+
+#4
+select name, screen_name
+from airport
+left join game on ident=location
+where name like "%Hels%";
+![](https://github.com/xind797/database/blob/main/screenshots/4-4.png)
+
+#5
+select name, screen_name
+from goal
+left join goal_reached on goal_id =goal.id
+left join game on game.id= game_id;
+![](https://github.com/xind797/database/blob/main/screenshots/4-5.png)
 
 
 
