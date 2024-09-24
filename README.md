@@ -289,6 +289,24 @@ from airport
 <img width="414" alt="#10(exercise6)" src="https://github.com/user-attachments/assets/207efbc0-79b3-46d7-8709-64a3bd678ef1">
 
 
+Exercise7:
+#1
+update game
+set location = (select ident from airport 
+where name = "Nottingham Airport"), co2_consumed = co2_consumed + 500 
+where screen_name = "Vesa";
+
+select * from game;
+<img width="736" alt="#1-exercise7" src="https://github.com/user-attachments/assets/d4febe46-ac31-4f66-a2b7-542c5574065d">
+
+#3
+delete from goal_reached;
+select * from goal_reached;
+
+#4
+delete from game;
+select * from game;
+
 
 
 
